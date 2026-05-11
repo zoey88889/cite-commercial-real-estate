@@ -90,8 +90,8 @@
     }
 
     h1 {
-      max-width: 980px;
-      font-size: clamp(44px, 8vw, 92px);
+      max-width: 920px;
+      font-size: clamp(38px, 5.8vw, 68px);
     }
 
     h2 {
@@ -125,11 +125,13 @@
     }
 
     .nav {
-      height: 76px;
+      min-height: 76px;
+      padding: 16px 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 24px;
+      flex-wrap: wrap;
     }
 
     .brand {
@@ -139,6 +141,7 @@
       font-family: Georgia, "Times New Roman", serif;
       font-size: 18px;
       line-height: 1.15;
+      flex: 1 1 280px;
     }
 
     .brand small {
@@ -152,25 +155,28 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 28px;
+      justify-content: flex-end;
+      gap: 10px 20px;
       color: var(--charcoal);
-      font-size: 13px;
+      font-size: 11px;
       letter-spacing: 0.04em;
       text-transform: uppercase;
+      flex: 2 1 560px;
+      flex-wrap: wrap;
     }
 
     .nav-cta {
       border: 1px solid var(--ink);
-      padding: 10px 16px;
+      padding: 8px 14px;
     }
 
     .hero {
-      min-height: calc(100vh - 76px);
+      min-height: calc(100vh - 88px);
       display: grid;
       align-items: end;
-      padding: 96px 0 54px;
+      padding: 88px 0 56px;
       background:
-        linear-gradient(rgba(17,17,17,0.32), rgba(17,17,17,0.36)),
+        linear-gradient(rgba(17,17,17,0.58), rgba(17,17,17,0.66)),
         url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2200&q=80") center / cover;
       color: var(--warm-white);
     }
@@ -182,7 +188,7 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1fr 330px;
+      grid-template-columns: minmax(0, 1fr) 320px;
       gap: 48px;
       align-items: end;
     }
@@ -216,19 +222,39 @@
       min-height: 48px;
       padding: 12px 20px;
       border: 1px solid currentColor;
+      color: var(--ink);
       font-size: 13px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
     }
 
+    .button.primary,
     .button.dark {
       background: var(--ink);
       color: var(--warm-white);
       border-color: var(--ink);
     }
 
+    .button.secondary {
+      background: transparent;
+    }
+
+    .hero .button.primary {
+      background: var(--warm-white);
+      color: var(--ink);
+      border-color: var(--warm-white);
+    }
+
+    .hero .button.secondary,
     .button.light {
       color: var(--warm-white);
+    }
+
+    .button:hover {
+      background: var(--charcoal);
+      color: var(--warm-white);
+      border-color: var(--charcoal);
     }
 
     main section {
@@ -401,10 +427,15 @@
       gap: 16px;
     }
 
-    .contact-card a {
+    .contact-phone {
       font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(28px, 4vw, 46px);
       line-height: 1.1;
+    }
+
+    .contact-email {
+      color: var(--muted);
+      overflow-wrap: anywhere;
     }
 
     .site-footer {
@@ -451,12 +482,14 @@
       }
 
       .nav-links {
-        display: none;
+        justify-content: flex-start;
+        gap: 10px 16px;
+        flex-basis: 100%;
       }
 
       .hero {
-        min-height: 760px;
-        padding: 82px 0 42px;
+        min-height: 700px;
+        padding: 72px 0 42px;
       }
 
       .hero-grid,
@@ -475,7 +508,7 @@
       }
 
       main section {
-        padding: 78px 0;
+        padding: 72px 0;
       }
 
       .tile {
@@ -493,6 +526,20 @@
         width: min(100% - 28px, var(--max));
       }
 
+      .brand {
+        font-size: 16px;
+      }
+
+      .brand small {
+        font-size: 10px;
+      }
+
+      .nav-links {
+        gap: 8px 12px;
+        font-size: 10px;
+        line-height: 1.35;
+      }
+
       .button-row {
         flex-direction: column;
       }
@@ -502,11 +549,24 @@
       }
 
       h1 {
-        font-size: 42px;
+        font-size: 36px;
+        line-height: 1.12;
       }
 
       h2 {
         font-size: 34px;
+      }
+
+      .lead {
+        font-size: 17px;
+      }
+
+      details {
+        padding: 22px;
+      }
+
+      summary {
+        font-size: 21px;
       }
     }
   </style>
@@ -548,10 +608,12 @@
       </a>
 
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#markets">Markets</a>
-        <a href="#services">Services</a>
-        <a href="#neighborhoods">Neighborhoods</a>
-        <a href="#insight">Investment</a>
+        <a href="#markets">Commercial</a>
+        <a href="#manhattan-office">Manhattan Office</a>
+        <a href="#queens-industrial">Queens Warehouse</a>
+        <a href="#chinatown-retail">Chinatown Retail</a>
+        <a href="#restaurant-guide">Restaurant Guide</a>
+        <a href="#legal">Legal</a>
         <a class="nav-cta" href="#contact">Contact</a>
       </nav>
     </div>
@@ -565,8 +627,8 @@
           <h1 id="hero-title">Institutional guidance for commercial property decisions across New York City.</h1>
           <p class="lead">Cite International Realty Corp | 千禧地产 advises owners, tenants, international buyers, and long-term investors across Manhattan office space, Queens warehouse assets, Chinatown retail storefronts, Brooklyn commercial corridors, and strategic NYC investment property.</p>
           <div class="button-row" aria-label="Primary calls to action">
-            <a class="button light" href="#contact">Discuss a Requirement</a>
-            <a class="button light" href="#services">Explore Advisory Services</a>
+            <a class="button primary" href="#contact">Schedule Advisory Call</a>
+            <a class="button secondary" href="#services">Explore Commercial Services</a>
           </div>
         </div>
 
@@ -789,7 +851,7 @@
             <p>Loading, ceiling height, column spacing, power, zoning, truck access, parking, proximity to highways, and lease structure are central. LIC, Maspeth, Jamaica, and nearby Queens markets each serve different industrial and logistics needs.</p>
           </details>
 
-          <details>
+          <details id="restaurant-guide">
             <summary>Is Chinatown retail suitable for restaurant space?</summary>
             <p>Chinatown can be strong for restaurant and specialty retail uses, but each storefront must be reviewed for venting, gas, frontage, foot traffic, layout, licensing considerations, and the strength of the surrounding tenant mix.</p>
           </details>
@@ -811,23 +873,25 @@
 
         <div class="contact-card">
           <p>Cite International Realty Corp | 千禧地产</p>
-          <a href="tel:+19175089318">917-508-9318</a>
+          <a class="contact-phone" href="tel:+19175089318">917-508-9318</a>
+          <a class="contact-email" href="mailto:christineciterealty@gmail.com">christineciterealty@gmail.com</a>
           <p>New York Commercial Real Estate Advisory for Manhattan office space, Queens warehouse assets, Chinatown retail storefronts, Brooklyn commercial corridors, and NYC investment property.</p>
           <div class="button-row">
-            <a class="button dark" href="tel:+19175089318">Call Advisory Team</a>
-            <a class="button" href="mailto:info@citeinternationalrealty.com">Email Inquiry</a>
+            <a class="button primary" href="tel:+19175089318">Schedule Advisory Call</a>
+            <a class="button secondary" href="mailto:christineciterealty@gmail.com">Email Inquiry</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer" aria-label="Footer">
+  <footer class="site-footer" id="legal" aria-label="Footer">
     <div class="container footer-grid">
       <div>
         <div class="footer-brand">Cite International Realty Corp | 千禧地产</div>
         <p class="footer-meta">New York Commercial Real Estate Advisory</p>
         <p class="footer-meta">Phone: <a href="tel:+19175089318">917-508-9318</a></p>
+        <p class="footer-meta">Email: <a href="mailto:christineciterealty@gmail.com">christineciterealty@gmail.com</a></p>
       </div>
 
       <nav class="footer-links" aria-label="Footer navigation">
@@ -836,6 +900,11 @@
         <a href="#queens-industrial">Queens Warehouse</a>
         <a href="#chinatown-retail">Chinatown Retail</a>
         <a href="#nyc-investment">NYC Investment Property</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="fair-housing.html">Fair Housing</a>
+        <a href="dmca.html">DMCA</a>
+        <a href="privacy.html">Privacy Policy</a>
       </nav>
     </div>
   </footer>
