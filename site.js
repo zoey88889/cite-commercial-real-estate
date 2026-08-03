@@ -3,7 +3,7 @@ const navigationItems = [
   ["Buy", "/buy.html"],
   ["Sell", "/sell.html"],
   ["Listings", "/listings.html"],
-  ["Our Agents", "/agents.html"],
+  ["Broker", "/agents.html"],
   ["Projects", "/projects.html"],
   ["About", "/about.html"],
   ["Contact", "/contact.html"],
@@ -85,4 +85,3 @@ class SiteFooter extends HTMLElement {
 
 customElements.define("site-header", SiteHeader);
 customElements.define("site-footer", SiteFooter);
-
