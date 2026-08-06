@@ -67,10 +67,10 @@ class SiteFooter extends HTMLElement {
           </div>
           <nav class="footer-links" aria-label="Footer navigation">
             <a href="/#markets">New York Commercial Real Estate</a>
-            <a href="/#manhattan-office">New York Office Space</a>
-            <a href="/#queens-industrial">New York Industrial & Warehouse</a>
-            <a href="/#chinatown-retail">New York Retail</a>
-            <a href="/#nyc-investment">New York Investment Property</a>
+            <a href="/#new-york-office">New York Office Space</a>
+            <a href="/#new-york-industrial">New York Industrial & Warehouse</a>
+            <a href="/#new-york-retail">New York Retail</a>
+            <a href="/#new-york-investment">New York Investment Property</a>
             <a href="/disclaimer.html">Disclaimer</a>
             <a href="/terms.html">Terms of Use</a>
             <a href="/standardized-operating-procedures.html">Operating Procedures</a>
