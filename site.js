@@ -59,11 +59,11 @@ class SiteFooter extends HTMLElement {
       <footer class="site-footer" id="legal" aria-label="Footer">
         <div class="container footer-grid">
           <div>
-            <div class="footer-brand">Cite International Realty Corp | 千禧地产</div>
-            <p class="footer-meta">New York Commercial Real Estate Advisory</p>
-            <p class="footer-meta">(Christine) Xinyue Cui, NY Licensed Real Estate Professional</p>
-            <p class="footer-meta">Phone: <a href="tel:+19175089318">917-508-9318</a></p>
-            <p class="footer-meta">Email: <a href="mailto:christineciterealty@gmail.com">christineciterealty@gmail.com</a></p>
+            <div class="footer-brand">CITE INTERNATIONAL REALTY CORP</div>
+            <p class="footer-meta">New York Licensed Real Estate Broker · License / Unique ID 10311210827</p>
+            <p class="footer-meta">Representative Broker: CUI XINYUE</p>
+            <p class="footer-meta">Licensed Address: 145-02 34RD AVE, FLUSHING, NY 11354</p>
+            <p class="footer-meta">Brokerage Contact: <a href="tel:+19175089318">917-508-9318</a> · <a href="mailto:christineciterealty@gmail.com">christineciterealty@gmail.com</a></p>
           </div>
           <nav class="footer-links" aria-label="Footer navigation">
             <a href="/#markets">NYC Commercial Real Estate</a>
@@ -73,7 +73,9 @@ class SiteFooter extends HTMLElement {
             <a href="/#nyc-investment">NYC Investment Property</a>
             <a href="/disclaimer.html">Disclaimer</a>
             <a href="/terms.html">Terms of Use</a>
+            <a href="/standardized-operating-procedures.html">Operating Procedures</a>
             <a href="/fair-housing.html">Fair Housing</a>
+            <a href="https://dos.ny.gov/fair-housing-notice" target="_blank" rel="noopener noreferrer">NYS Fair Housing Notice ↗</a>
             <a href="/dmca.html">DMCA</a>
             <a href="/privacy.html">Privacy Policy</a>
           </nav>
