@@ -22,8 +22,8 @@ class SiteHeader extends HTMLElement {
     this.innerHTML = `
       <header class="site-header" aria-label="Site header">
         <div class="container nav">
-          <a class="brand" href="/" aria-label="Cite International Realty Corp home">
-            Cite International Realty Corp | 千禧地产
+          <a class="brand" href="/" aria-label="CITE INTERNATIONAL REALTY CORP home">
+            CITE INTERNATIONAL REALTY CORP
             <small>New York Commercial Real Estate Advisory</small>
           </a>
           <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">
