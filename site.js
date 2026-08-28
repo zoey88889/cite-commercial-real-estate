@@ -63,7 +63,7 @@ class SiteFooter extends HTMLElement {
             <p class="footer-meta">New York Licensed Real Estate Broker · License / Unique ID 10311210827</p>
             <p class="footer-meta">Representative Broker: CUI XINYUE</p>
             <p class="footer-meta">Licensed Address: 145-02 34RD AVE, FLUSHING, NY 11354</p>
-            <p class="footer-meta">Brokerage Contact: <a href="tel:+19175089318">917-508-9318</a> · <a href="mailto:christineciterealty@gmail.com">christineciterealty@gmail.com</a></p>
+            <p class="footer-meta">Cell: <a href="tel:+19175089318">917-508-9318</a> · <a href="mailto:christineciterealty@gmail.com">christineciterealty@gmail.com</a></p>
           </div>
           <nav class="footer-links" aria-label="Footer navigation">
             <a href="/#markets">New York Commercial Real Estate</a>
